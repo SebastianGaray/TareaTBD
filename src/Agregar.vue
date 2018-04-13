@@ -35,10 +35,10 @@
      data(){
        return{
          form : {
-             //   actorId: 1,
+                actorId: 1,
                firstName: '',
                lastName: '',
-            //    lastUpdate: 1139988873000,
+              lastUpdate: 1139988873000,
 
 
              }
