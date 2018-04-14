@@ -1,5 +1,17 @@
 <template>
   <div class="center">
+    <p v-if="add.length">
+      <b>Se ha añadido a:</b>
+      <ul>
+        <li v-for="added in add">{{ added }}</li>
+      </ul>
+    </p>
+    <p v-if="errors.length">
+      <b>Por favor, corriga los siguientes errores: </b>
+      <ul>
+        <li v-for="error in errors">{{ error }}</li>
+      </ul>
+    </p>
    <section class="form">
             <div class="field">
               <label class="label">Name</label>
@@ -11,18 +23,7 @@
           </section>
             <button v-on:click="agregar(form)">Add 1</button>
 
-          <div class="column">
-                <section class="section" id="results">
-                  <div class="box">
-                    <ul>
-                      <!-- loop through all the `form` properties and show their values -->
-                      <li v-for="(item, k) in form">
-                        <strong>{{ k }}:</strong> {{ item }}
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
+
 
 
 
@@ -34,10 +35,12 @@
    export default {
      data(){
        return{
+         errors:[],
+         add: [],
          form : {
                 actorId: 1,
-               firstName: '',
-               lastName: '',
+               firstName: null,
+               lastName: null,
               lastUpdate: 1139988873000,
 
 
@@ -46,10 +49,21 @@
      },
      methods:{
      agregar: function(form){
-        this.$http.post('http://localhost:3000/actors/', this.form);
-        console.log(this.form);
+        if(this.validar()){
+            this.$http.post('http://localhost:3000/actors/', this.form);
+            console.log(this.form);
+            this.add.push(this.form.firstName);
 
-     }
+        }
+
+     },
+      validar:function(e) {
+           if(this.form.firstName && this.form.lastName) return true;
+           this.errors = [];
+           if(!this.form.firstName) this.errors.push("Ingrese Nombre.");
+           if(!this.form.lastName) this.errors.push("Ingrese Apellido.");
+           e.preventDefault();
+         }
 
 
      },

@@ -7,6 +7,7 @@ import VueResource from 'vue-resource';
 require("./style.scss");
 
 import App from './App.vue';
+
 Vue.use(VueRouter);
 Vue.use(VueResource);
 const routes = [

@@ -67,6 +67,34 @@
       "lastName": "Higashikata",
       "lastUpdate": 1139988873000,
       "id": 1
+    },
+    {
+      "actorId": 1,
+      "firstName": "Jonathan",
+      "lastName": "Joestar",
+      "lastUpdate": 1139988873000,
+      "id": 2
+    },
+    {
+      "actorId": 1,
+      "firstName": "Dio",
+      "lastName": "Brando",
+      "lastUpdate": 1139988873000,
+      "id": 3
+    },
+    {
+      "actorId": 1,
+      "firstName": "Giorno",
+      "lastName": "Giovanna",
+      "lastUpdate": 1139988873000,
+      "id": 4
+    },
+    {
+      "actorId": 1,
+      "firstName": "Robert",
+      "lastName": "Speedwagon",
+      "lastUpdate": 1139988873000,
+      "id": 5
     }
   ]
 }
