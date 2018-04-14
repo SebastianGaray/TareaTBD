@@ -46,7 +46,8 @@
      },
      methods:{
      agregar: function(form){
-        this.$http.post('http://localhost:3000/actors/', [form]);fistNa
+        this.$http.post('http://localhost:3000/actors/', this.form);
+        console.log(this.form);
 
      }
 

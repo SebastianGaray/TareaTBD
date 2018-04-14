@@ -61,25 +61,12 @@
       "lastName": "GABLE",
       "lastUpdate": 1139988873000
     },
-    [
-      {
-        "firstName": "aaa",
-        "lastName": "bbb"
-      }
-    ],
-    [
-      {
-        "firstName": "prueba",
-        "lastName": "prueba2"
-      }
-    ],
-    [
-      {
-        "actorId": 1,
-        "firstName": "prueba3",
-        "lastName": "pruebaaaa",
-        "lastUpdate": 1139988873000
-      }
-    ]
+    {
+      "actorId": 1,
+      "firstName": "Josuke",
+      "lastName": "Higashikata",
+      "lastUpdate": 1139988873000,
+      "id": 1
+    }
   ]
 }
