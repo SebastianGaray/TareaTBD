@@ -14,16 +14,28 @@
     </p>
    <section class="form">
             <div class="field">
-              <label class="label">Name</label>
+              <label class="label">Datos actor</label><br></br>
               <div class="control">
-                <input v-model="form.firstName" class="input" type="text" placeholder="Text input">
-                <input v-model="form.lastName" class="input" type="text" placeholder="Text input2">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <label class="control-label col-sm-2" for="name">Nombre:</label>
+                        <input v-model="form.firstName" class="input" type="text" placeholder="Ingrese nombre"><br></br>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <label class="control-label col-sm-2" for="lastName">Apellido:</label>
+                        <input v-model="form.lastName" class="input" type="text" placeholder="Ingrese apellido"><br></br>
+                    </div>
+                </div>
               </div>
             </div>
-          </section>
-            <button v-on:click="agregar(form)">Add 1</button>
-
-
+   </section>
+          <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button  v-on:click="agregar(form)">Agregar</button>
+              </div>
+           </div>
 
 
 
